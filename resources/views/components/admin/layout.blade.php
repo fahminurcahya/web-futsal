@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
     <link rel=" stylesheet" href="{{ asset('assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
     <link rel=" stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
@@ -40,6 +41,12 @@
     <script src="{{ asset('assets/plugins/chart.js/Chart.min.js')}}"></script>
     <script src="{{ asset('assets/dist/js/demo.js')}}"></script>
     <script src="{{ asset('assets/dist/js/pages/dashboard2.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        @if(Session::has('success'))
+            toastr.success("{{ Session::get('success') }}");
+        @endif
+    </script>
 </body>
 
 </html>

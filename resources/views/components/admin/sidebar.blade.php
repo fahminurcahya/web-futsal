@@ -12,7 +12,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
                 <li class="nav-item">
-                    <a href="{{ route('admin.dashboard.index') }}" class="nav-link {{ request()->is('/') ? 'active' : '' }}">
+                    <a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->is('/') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-chart-pie"></i>
                         <p>
                             Dasboard
@@ -20,7 +20,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.payment.index') }}" class="nav-link {{ request()->is('admin/payment') ? 'active' : '' }}">
+                    <a href="{{ route('admin.payment') }}" class="nav-link {{ request()->is('admin/payment') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-money-bill"></i>
                         <p>
                             Payment Transaction
@@ -28,8 +28,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.booking.index') }}" class="nav-link {{ request()->is('admin/booking') ? 'active' : '' }}">
-                        <i class="nav-icon far fa-image"></i>
+                    <a href="{{ route('admin.booking') }}" class="nav-link {{ request()->is('admin/booking') ? 'active' : '' }}">
+                        <i class="nav-icon far fa-futbol"></i>
                         <p>
                             Bookings
                         </p>
@@ -37,23 +37,15 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('admin.field.index') }}" class="nav-link {{ request()->is('admin/field') ? 'active' : '' }}">
-                        <i class="nav-icon far fa-futbol"></i>
-                        <p>
-                            Manage Fields
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('admin.timeslot.index') }}" class="nav-link {{ request()->is('admin/timeslot') ? 'active' : '' }}">
+                    <a href="{{ route('admin.field') }}" class="nav-link {{ request()->is('admin/field') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-business-time"></i>
                         <p>
-                            Manage Time Slot
+                            Manage Fields & Time
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.user.index') }}" class="nav-link {{ request()->is('admin/user') ? 'active' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('admin/user') ? 'active' : '' }}">
                         <i class="nav-icon far fa-user"></i>
                         <p>
                             Manage User

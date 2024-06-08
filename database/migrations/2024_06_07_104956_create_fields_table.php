@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('fields', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('location');
             $table->decimal('price_per_hour', 10, 2);
             $table->text('desc')->nullable();
             $table->text('image')->nullable();

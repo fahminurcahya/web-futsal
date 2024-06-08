@@ -12,7 +12,8 @@ class TimeSlotController extends Controller
      */
     public function index()
     {
-        //
+        $timeslots = TimeSlot::orderBy('start_time', 'asc')->get();
+        return view('admin.timeslot.index',  compact('timeslots'));
     }
 
     /**
@@ -52,14 +53,9 @@ class TimeSlotController extends Controller
      */
     public function update(Request $request, TimeSlot $timeSlot)
     {
-        //
-    }
+        $timeSlot->is_active = !$timeSlot->is_active;
+        $timeSlot->save();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(TimeSlot $timeSlot)
-    {
-        //
+        return response()->json(['success' => true, 'message' => 'updated successfully.']);
     }
 }
